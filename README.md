@@ -12,7 +12,7 @@ Para kubernetes Ansible docker se puede utilizar esta plataforma https://www.kat
 Se realiza el despliegue a través del comando 
  ``` docker-compose -f docker-compose.yml up -d ``` 
  
- ## Desplegar Jenkins y restaurar
+ ## Desplegar Jenkins
  Se ejecuta los siguientes comandos para levantar y restaurar Jenkins. 
 
  * En primer lugar es necesario clonar el repositorio con el siguiente comando: 
@@ -21,17 +21,71 @@ Se realiza el despliegue a través del comando
 
  ```
 
- * una vez clonado el repositorio se ejecuta el siguente comando para levantar jenkins:
+ * Al clonar el repositorio se ejecuta el siguente comando para levantar jenkins:
  ```
- docker-compose -f Docker/Jenkins.yml up -d
- 
+ docker-compose -f Jenkins.yml up -d
+ ```
+
+ * En caso de que ocurra algun error tambien se puede ejecutar de la siguiente forma: 
+```
+ docker run -d --name jenkins -p 9200:9000 jenkins/jenkins
+ ```
+
+## Desplegar Portainers
+ Se ejecuta los siguientes comandos para levantar Portainers. 
+
+ * Tambien es necesario clonar el repositorio con el siguiente comando: 
+ ```
+ https://github.com/DemosPeriferiaDevOps/DemosDocker
 
  ```
+
+ * Al clonar el repositorio se ejecuta el siguente comando para levantar Portainer:
+ ```
+ docker-compose -f Portainer.yml up -d
+ ```
+
+
+## Desplegar Nexus
+ Se ejecuta los siguientes comandos para levantar Nexus. 
+
+ * Tambien es necesario clonar el repositorio con el siguiente comando: 
+ ```
+ https://github.com/DemosPeriferiaDevOps/DemosDocker
+
+ ```
+
+ * Al clonar el repositorio se ejecuta el siguente comando para levantar Nexus:
+ ```
+ docker-compose -f Nexus.yml up -d
+ ```
+
+
+## Desplegar Sonarqube
+ Se ejecuta los siguientes comandos para levantar Sonarqube. 
+
+ * Tambien es necesario clonar el repositorio con el siguiente comando: 
+ ```
+ https://github.com/DemosPeriferiaDevOps/DemosDocker
+
+ ```
+
+ * Al clonar el repositorio se ejecuta el siguente comando para levantar Sonarqube:
+ ```
+ docker-compose -f Sonarqube.yml up -d
+ ```
+
+ * En caso de que ocurra algun error tambien se puede ejecutar de la siguiente forma: 
+```
+ docker run -d --name jenkins -p 9200:9000 sonarqube:8-community
+ ```
+
+
  
- ## Otra instancia
-Crear una nueva instancia, clonar el repositorio y ejecutar:
+ ## Levantar todas las herramientas disponibles 
+Para ello es necesario crear un archivo bash o .sh, que será ejecutado al clonar el repositorio de la siguente forma: 
   ```
- git clone https://github.com/edo2004/Docker.git
- sh Docker/comandosNuevaInstancia.sh
+ https://github.com/DemosPeriferiaDevOps/DemosDocker
+ sh DemosDocker/AllTools.sh
 
  ```
