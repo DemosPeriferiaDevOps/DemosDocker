@@ -3,11 +3,11 @@ docker-compose -f DemosDocker/Jenkins.yml up -d
 # obtener contraseña
 echo ______________Jenkins Listo______________
 
-docker-compose -f DemosDocker/Portainer.yml up -d
+#docker-compose -f DemosDocker/Portainer.yml up -d
 # obtener contraseña
 echo ______________Portainers Listo______________
 
-docker-compose -f DemosDocker/Nexus.yml up -d
+#docker-compose -f DemosDocker/Nexus.yml up -d
 # obtener contraseña
 echo ______________Nexus Listo______________
 
