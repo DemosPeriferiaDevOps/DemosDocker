@@ -77,7 +77,7 @@ Se realiza el despliegue a través del comando
 
  * En caso de que ocurra algun error tambien se puede ejecutar de la siguiente forma: 
 ```
- docker run -d --name jenkins -p 9200:9000 sonarqube:8-community
+ docker run -d --name sonarcommunity -p 9200:9000 sonarqube:8-community
  ```
 
 
