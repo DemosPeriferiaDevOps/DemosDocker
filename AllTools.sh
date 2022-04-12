@@ -11,7 +11,7 @@ echo ______________Portainers Listo______________
 # obtener contraseña
 echo ______________Nexus Listo______________
 
-docker-compose -f DemosDocker/SonarQube.yml up -d
+#docker-compose -f DemosDocker/SonarQube.yml up -d
 
 echo ______________ SonarQube Iniciado______________
 
