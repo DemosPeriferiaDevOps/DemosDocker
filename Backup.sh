@@ -12,6 +12,7 @@ cp backupJenkins.tar.gz /var/jenkins/
 
 cd /var/jenikns/
 tar -xzvf backupJenkins.tar.gz
+sleep 20
 rm backupJenkins.tar.gz
 cd
 #levantar Jenkins
