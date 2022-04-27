@@ -8,6 +8,10 @@ chmod 400 DemosDocker/keybackup.pem
 #bajar backup
 scp -i DemosDocker/keybackup.pem ubuntu@ec2-44-192-98-222.compute-1.amazonaws.com:/home/ubuntu/backupJenkins.tar.gz .
 
+cd /var/
+mkdir jenkins 
+
+cd
 cp backupJenkins.tar.gz /var/jenkins/
 
 cd /var/jenikns/
