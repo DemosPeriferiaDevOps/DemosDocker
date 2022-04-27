@@ -1,21 +1,19 @@
 # tar -czvf backup.tar.gz /var/jenkins/*
 
 # #subir backub
-# scp -i DemosDocker/keybackup.pem backup/backup.tar.gz ubuntu@ec2-44-192-98-222.compute-1.amazonaws.com:/home/ubuntu/backupJenkins.tar
+# scp -i DemosDocker/keybackup.pem backup/backup.tar.gz ubuntu@ec2-34-205-27-102.compute-1.amazonaws.com:/home/ubuntu/backupJenkins.tar.gz
 
 #dar permisos a clave
 chmod 400 DemosDocker/keybackup.pem
 #bajar backup
-scp -i DemosDocker/keybackup.pem ubuntu@ec2-44-192-98-222.compute-1.amazonaws.com:/home/ubuntu/backupJenkins.tar.gz .
+scp -i DemosDocker/keybackup.pem ubuntu@ec2-34-205-27-102.compute-1.amazonaws.com:/home/ubuntu/backupJenkins.tar.gz .
 
-cd /var/
-mkdir jenkins 
+mkdir /var/jenkins 
 
-cd
 cp backupJenkins.tar.gz /var/jenkins/
 
 cd /var/jenkins/
-tar -xzvf backupJenkins.tar.gz
+tar -xzvf /var/jenkins/backupJenkins.tar.gz
 sleep 20
 rm backupJenkins.tar.gz
 cd
